@@ -1,0 +1,1002 @@
+     
+        /* Color Palette */
+      
+/* Global Styles */
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color, #333333); /* Default text color */
+    background-color: var(--bg-light, #ffffff); /* Default background color */
+    scroll-behavior: smooth;
+    transition: background-color var(--transition-duration, 0.3s), color var(--transition-duration, 0.3s);
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark, #121212); /* Dark mode background color */
+    color: var(--text-color, #e0e0e0); /* Dark mode text color */
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: var(--bg-light, #ffffff); /* Default navbar background */
+    color: #ffff00; /* Default navbar text color */
+    transition: background-color var(--transition-duration, 0.3s) ease, color var(--transition-duration, 0.3s) ease, box-shadow var(--transition-duration, 0.3s) ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--bg-dark, #121212); /* Dark mode navbar background */
+    color: var(--text-light, #e0e0e0); /* Dark mode navbar text color */
+}
+
+.navbar-scrolled {
+    background-color: var(--primary-light, #007bff) !important; /* Ensure scrolled navbar retains light mode color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.dark-mode-toggle:hover {
+    color: var(--accent-color, #ff4081); /* Accent color on hover */
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Accessibility Improvements */
+body.dark-mode .dark-mode-toggle {
+    color: var(--text-light, #e0e0e0); /* Ensure toggle button is visible in dark mode */
+}
+
+.dark-mode-toggle:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px var(--primary-color, #007bff); /* Add custom focus outline */
+}
+
+        /* Service Card Styles */
+        .service-card {
+            transition: all 0.4s ease;
+            border: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Pricing Card Styles */
+        .pricing-card {
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Technology Stack Styles */
+        .tech-stack-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-stack-icon:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+   
+        /* Hero Section Responsive Adjustments */
+        .hero {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: #1E1E1E; /* Dark background for contrast */
+            color: #D4D4D4; /* Light text color */
+            overflow: hidden; /* Hide overflow */
+        }
+        
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive Button Styles */
+        .btn-custom {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.5s ease;
+        }
+
+        .btn-custom:hover::before {
+            left: 0;
+        }
+
+        /* Responsive Service Cards */
+        .service-card {
+            transition: all 0.4s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .service-card:hover {
+            transform: rotateY(10deg) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive Grid Adjustments */
+        @media (max-width: 768px) {
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-cta .btn {
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+
+            .service-card, .pricing-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .hero-title.typing-container,
+        .hero-subtitle.typing-container {
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            background-color: #1E1E1E;
+            color: #D4D4D4;
+            padding: 15px,50px;
+            border-radius: 5px;
+            display: inline-block;
+            text-shadow: 0 0 5px rgba(0,255,0,0.3);
+        }
+    
+        .typing-text {
+            position: relative;
+        }
+    
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #569CD6;
+            animation: blink 0.7s infinite;
+        }
+    
+        @keyframes blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        /* Particle Background Effect */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Behind the terminal */
+        }
+        reloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Optional: dark background for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it is on top of other content */
+        }
+        
+        .sparkle {
+            animation: sparkle 1.5s infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: bubble-rise 4s infinite;
+        }
+        
+        @keyframes bubble-rise {
+            0% { transform: translateY(100%); opacity: 1; }
+            100% { transform: translateY(-100%); opacity: 0; }
+        }
+        
+        .content {
+            display: none; /* Initially hidden until preloader is done */
+        }
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+            overflow: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .preloader-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: float 2s ease-in-out infinite;
+        }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--background-color, #121212);
+    color: var(--text-color, #e0e0e0);
+}
+
+body.dark-mode a {
+    color: var(--primary-color, #3f9fff);
+}
+
+body.dark-mode button,
+body.dark-mode input {
+    background-color: var(--background-color, #121212);
+    color: var(--text-color, #e0e0e0);
+    border: 1px solid var(--secondary-color, #a0a0a0);
+}
+
+body.dark-mode button:focus,
+body.dark-mode input:focus {
+    box-shadow: 0 0 0 2px var(--primary-color, #3f9fff);
+}
+
+
+.dark-mode-toggle i {
+    font-size: 1.2em;
+    color: var(--text-color, #e0e0e0);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle i.sun {
+    opacity: 0;
+}
+
+body.dark-mode .dark-mode-toggle i.moon {
+    opacity: 0;
+}
+
+body.dark-mode .dark-mode-toggle i.sun {
+    opacity: 1;
+}
+        .preloader-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .preloader-subtext {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .preloader-progress {
+            width: 300px;
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+  
+        @keyframes blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .terminal-container {
+                width: 95%;
+                padding: 15px;
+            }
+            .typing-text {
+                font-size: 1rem;
+            }
+        }
+        .terminal-container {
+            position: relative;
+            background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
+            border: 2px solid #2D2D2D; /* Terminal border */
+            border-radius: 10px; /* Rounded corners */
+            padding: 40px 20px; /* Padding for content */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+            z-index: 2; /* Above the particle background */
+            max-width: 600px; /* Maximum width for the terminal */
+            width: 90%; /* Responsive width */
+        }
+
+        .typing-container {
+            margin-bottom: 20px; /* Space between typing effects */
+        }
+
+        .typing-text {
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #3f9fff;
+}
+
+
+.dark-mode-toggle.dark-mode {
+    background-color: #333;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.checkmark {
+    opacity: 1;
+}
+
+.dark-mode .checkmark {
+    opacity: 0;
+}
+
+.dark-mode .cross {
+    opacity: 1;
+}
+
+.cross {
+    opacity: 0;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode a {
+    color: #3f9fff;
+}
+
+
+.dark-mode-toggle.dark-mode {
+    background-color: #333;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.checkmark {
+    opacity: 1;
+}
+
+.dark-mode .checkmark {
+    opacity: 0;
+}
+
+.dark-mode .cross {
+    opacity: 1;
+}
+
+.cross {
+    opacity: 0;
+}
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2rem;
+            background-color: var(--cursor-color);
+            animation: blink 0.7s infinite;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .terminal-container {
+                width: 95%;
+                padding: 15px;
+            }
+            .typing-text {
+                font-size: 1rem;
+            }
+        }
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+        .preloader-progress-bar {
+            width: 0;
+            height: 100%;
+            background: white;
+            transition: width 3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        :root {
+            /* Light Mode Colors */
+            --background-color: #ffffff;
+            --text-color: #8080ff;
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+        
+            /* Dark Mode Colors */
+            --dark-background-color: #121212;
+            --dark-text-color: #e0e0e0;
+            --dark-primary-color: #3f9fff;
+            --dark-secondary-color: #a0a0a0;
+        
+            /* Transition for smooth color changes */
+            transition: background-color 300ms ease, color 300ms ease;
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: 'Inter', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: var(--dark-background-color);
+            color: var(--dark-text-color);
+        }
+        
+        body.dark-mode a {
+            color: var(--dark-primary-color);
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .navbar-dark {
+            background-color: var(--dark-background-color);
+            color: var(--dark-text-color);
+        }
+        
+        .navbar .nav-link {
+            color: var(--secondary_color); 
+            transition: color 0.3s ease;
+        }
+        
+        .navbar .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .navbar .nav-link {
+            color: var(--dark-text-color);
+        }
+        
+        body.dark-mode .navbar .nav-link:hover {
+            color: var(--dark-primary-color);
+        }
+        
+        
+        
+        .dark-mode-toggle i {
+            font-size: 1.2em;
+            color: var(--text-color);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-mode .dark-mode-toggle i {
+            color: var(--dark-text-color);
+        }
+        
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--dark-background-color);
+            color: var(--dark-text-color);
+            overflow: hidden;
+        }
+        
+        /* Service and Pricing Card Styles */
+        .service-card, .pricing-card {
+            transition: all 0.4s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover, .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--dark-background-color);
+            color: var(--dark-text-color);
+            padding: 2rem 0;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 600px) {
+            .terminal-container {
+                width: 95%;
+                padding: 15px;
+            }
+            .typing-text {
+                font-size: 1rem;
+            }
+        }
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .navbar {
+            background-color: #1f1f1f;
+        }
+        .dark-mode .bg-light {
+            background-color: #2a2a2a !important;
+        }
+        .dark-mode .card {
+            background-color: #1f1f1f;
+            border: 1px solid #444;
+        }
+        .dark-mode .text-primary {
+            color: #bb86fc !important;
+        }
+        .dark-mode .footer {
+            background-color: #1f1f1f;
+        }
+        .dark-mode .form-control {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            border: 1px solid #444;
+        }
+        .dark-mode .form-control::placeholder {
+            color: #bbb;
+        }
+        /* Root Color Variables with Improved Contrast and Flexibility */
+:root {
+    /* Light Mode Palette */
+    --background-light: #ffffff;
+    --text-light: #ffffff;
+    --primary-light: #007bff;
+    --secondary-light: #6c757d;
+    --accent-light: #28a745;
+    --surface-light: #f8f9fa;
+    --border-light: #dee2e6;
+
+    /* Dark Mode Palette */
+    --background-dark: #121212;
+    --text-dark: #e0e0e0;
+    --primary-dark: #3f9fff;
+    --secondary-dark: #a0a0a0;
+    --accent-dark: #50fa7b;
+    --surface-dark: #1e1e1e;
+    --border-dark: #333333;
+
+    /* Transition Properties */
+    --transition-speed: 300ms;
+    --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Transition and Base Styles */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: 
+        background-color var(--transition-speed) var(--transition-easing),
+        color var(--transition-speed) var(--transition-easing);
+}
+
+/* Comprehensive Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+
+    /* Element-specific dark mode adjustments */
+    & a {
+        color: var(--primary-dark);
+        transition: color var(--transition-speed) var(--transition-easing);
+    }
+
+    & .navbar {
+        background-color: var(--surface-dark) !important;
+        border-color: var(--border-dark);
+    }
+
+    & .card {
+        background-color: var(--surface-dark);
+        border-color: var(--border-dark);
+        color: var(--text-light);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    & .btn-primary {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
+
+    & input, 
+    & textarea, 
+    & select {
+        background-color: var(--surface-dark);
+        color: var(--text-dark);
+        border-color: var(--border-dark);
+    }
+}
+/* Dark Mode Toggle Button */
+/* Dark Mode Toggle Button */
+
+/* Accessibility Enhancements */
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    /* Positioning and Layout */
+    position: flex;
+  
+    z-index: 1000;
+
+    /* Dimensions and Shape */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    /* Visual Properties */
+    background-color: var(--background-light);
+    border: 2px solid var(--primary-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Interaction */
+    cursor: pointer;
+    outline: none;
+    
+    /* Flexbox Centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Transitions */
+    transition: 
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Accessibility */
+    &:focus-visible {
+        outline: 3px solid var(--primary-light);
+        outline-offset: 2px;
+    }
+
+    /* Icon Styling */
+    & i {
+        font-size: 1.8rem;
+        color: var(--primary-light);
+        transition: 
+            color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Hover and Active States */
+    &:hover {
+        transform: scale(1.1) rotate(15deg);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        
+        & i {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Dual Icon Approach */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Moon Icon */
+    &::before {
+        background-image: url('path/to/moon-icon.svg');
+        opacity: 1;
+    }
+
+    /* Sun Icon */
+    &::after {
+        background-image: url('path/to/sun-icon.svg');
+        opacity: 0;
+    }
+
+    /* Dark Mode Toggle */
+    body.dark-mode & {
+        &::before {
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+
+        &::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dark-mode-toggle {
+        width: 40px; /* Smaller size for mobile */
+        height: 40px;
+        top: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+
+    .dark-mode-toggle i {
+        font-size: 1.5rem; /* Smaller icon size */
+    }
+}
+    /* Moon and Sun Icons */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Moon Icon */
+    &::before {
+        background-image: url('path/to/moon-icon.svg');
+        opacity: 1;
+    }
+
+    /* Sun Icon */
+    &::after {
+        background-image: url('path/to/sun-icon.svg');
+        opacity: 0;
+    }
+
+    /* Dark Mode Toggle */
+    body.dark-mode & {
+        &::before {
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+
+        &::after {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+    }
+
+
+/* Enhanced Accessibility for Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+}
+
+/* Smooth Transitions for All Elements */
+* {
+    transition: 
+        background-color var(--transition-speed) var(--transition-easing),
+        color var(--transition-speed) var(--transition-easing),
+        border-color var(--transition-speed) var(--transition-easing),
+        box-shadow var(--transition-speed) var(--transition-easing);
+}
+
+/* Specific Component Dark Mode Enhancements */
+.service-card {
+    body.dark-mode & {
+        background-color: var(--surface-dark);
+        border-color: var(--border-dark);
+        
+        &:hover {
+            box-shadow: 0 15px 30px rgba(255,255,255,0.05);
+        }
+    }
+}
+
+.pricing-card {
+    body.dark-mode & {
+        background-color: var(--surface-dark);
+        border-color: var(--primary-dark);
+    }
+}
+
+/* Typography Adjustments */
+body.dark-mode {
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        color: var(--text-dark);
+    }
+
+    & p, & span, & div {
+        color: var(--text-dark);
+    }
+}
+
+/* Scrollbar Styling for Dark Mode */
+@supports selector(::-webkit-scrollbar) {
+    body.dark-mode {
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--surface-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-dark);
+            border-radius: 6px;
+            border: 3px solid var(--surface-dark);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--primary-dark);
+        }
+    }
+}
+
+/* Reduced Motion Consideration */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

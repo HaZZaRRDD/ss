@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Development Maestro | Comprehensive Web Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+    <link href="{% static 'assets/main.css' %}" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+     <!-- Favicon -->
+     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+    
+     <!-- CSS Libraries -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+     
+    <style>
+ 
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div id="preloader-dynamic-content"></div>
+        </div>
+    </div>
+    
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              
+                <i class="fab fa-python me-2"></i>Django Maestro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>   
+            <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i> <!-- Moon icon for dark mode -->
+            </button>         
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section with Particle Background -->
+<section class="hero text-center position-relative">
+    <div id="particles-js" class="position-absolute"></div>
+    
+    <div class="terminal-container">
+        <div class="typing-container hero-title typing-container">
+            <div class="typing-text"></div>
+            <div class="cursor"></div>
+        </div>
+        
+        <div class="typing-container hero-skills typing-container">
+            <div class="typing-text"></div>
+            <div class="cursor"></div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Comprehensive Django Development Services</h2>
+            <div class="row">
+                <!-- Web Development Service -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card text-center p-4">
+                        <div class="service-icon floating-icon">🌐</div>
+                        <h4 class="mb-3">Custom Web Development</h4>
+                        <p>Tailored Django solutions with responsive design and cutting-edge features.</p>
+                        <ul class="list-unstyled">
+                            <li>User-Centric Interfaces</li>
+                            <li>Scalable Architecture</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Web App Development Service -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card text-center p-4">
+                        <div class="service-icon floating-icon">🚀</div>
+                        <h4 class="mb-3">Web Application Development</h4>
+                        <p>Robust, secure, and data-driven web applications using the Django framework.</p>
+                        <ul class="list-unstyled">
+                            <li>API Integration</li>
+                            <li>Real-Time Features</li>
+                            <li>Complex Backend Logic</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Maintenance Service -->
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card text-center p-4">
+                        <div class="service-icon floating-icon">🛠️</div>
+                        <h4 class="mb-3">Maintenance & Support</h4>
+                        <p>Continuous support and optimization for your Django applications.</p>
+                        <ul class="list-unstyled">
+                            <li>Security Updates</li>
+                            <li>Performance Monitoring</li>
+                            <li>24/7 Technical Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages Section -->
+    <section id="pricing" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Flexible Service Packages</h2>
+            <div class="row">
+                <!-- Basic Package -->
+                <div class="col-md-4">
+                    <div class="card pricing-card text-center p-4">
+                        <h3>Basic Package</h3>
+                        <h4 class="text-primary">$999</h4>
+                        <ul class="list-unstyled">
+                            <li>Single Page Website</li>
+                            <li>Basic SEO</li>
+                            <li>Mobile Responsive</li>
+                            <li>1 Month Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="col-md-4">
+                    <div class="card pricing-card text-center p-4">
+                        <h3>Standard Package</h3>
+                        <h4 class="text-primary">$2,499</h4>
+                        <ul class="list-unstyled">
+                            <li>Multi-Page Website</li>
+                            <li>Advanced SEO</li>
+                            <li>E-commerce Integration</li>
+                            <li>3 Months Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="col-md-4">
+                    <div class="card pricing-card text-center p-4">
+                        <h3>Premium Package</h3>
+                        <h4 class="text-primary">$4,999</h4>
+                        <ul class="list-unstyled">
+                            <li>Custom Web Application</li>
+                            <li>Full-Stack Development</li>
+                            <li>Cloud Deployment</li>
+                            <li>12 Months Support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="technologies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Technologies We Master</h2>
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <i class="fab fa-python tech-stack-icon" title="Python"></i>
+                    <i class="fab fa-django tech-stack-icon" title="Django"></i>
+                    <i class="fab fa-react tech-stack-icon" title="React"></i>
+                    <i class="fab fa-node tech-stack-icon" title="Node.js"></i>
+                    <i class="fab fa-aws tech-stack-icon" title="AWS"></i>
+                    <i class="fab fa-docker tech-stack-icon" title="Docker"></i>
+                    <i class="fab fa-git tech-stack-icon" title="Git"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Schedule Your Consultation</h2>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" required>
+                                        <option value="">Select Desired Service</option>
+                                        <option value="basic">Basic Package</option>
+                                        <option value="standard">Standard Package</option>
+                                        <option value="premium">Premium Package</option>
+                                        <option value="custom">Custom Solution</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Tell us about your project..." required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        Request Consultation
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Django Development Maestro. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="{% static 'assets/js/main.js' %}" defer></script>
+</html>
